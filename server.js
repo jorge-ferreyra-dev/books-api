@@ -1,10 +1,13 @@
 const { loadEnvFile } = require('node:process');
-const express = require('express');
-const booksRouter = require('./routes/books');
 
 if (process.env.NODE_ENV !== 'production') {
     loadEnvFile('.env');
     }
+    
+const express = require('express');
+const booksRouter = require('./routes/books');
+
+
 
     const app = express();
     const PORT = process.env.PORT || 3000;
